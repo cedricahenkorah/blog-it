@@ -1,6 +1,24 @@
 // styles
 import "./Landing.css";
+import icon from "../../assets/landingicon.svg";
 
 export default function Landing() {
-  return <div>Landing</div>;
+  return (
+    <div className="md:px-20 w-full lg:flex lg:pt-8 px-5">
+      <div className="flex flex-col xl:pt-24 lg:pt-10 pt-5 lg:w-[800px]">
+        <h1 className="font-extrabold xl:text-[4.2rem] lg:text-[3rem] md:text-[3.2rem] text-3xl xl:leading-[5rem] md:leading-[4rem]">
+          Discover new perspectives and stay informed with{" "}
+          <span className="text-blue-700">blogIt.</span>
+        </h1>
+        <p className="mt-5">
+          Explore a wide range of topics and expand your horizons today
+        </p>
+      </div>
+      <div className="pr-24 lg:pr-0 mt-5 lg:mt-0">
+        <div className="illustration">
+          <img src={icon} alt="landing" className="" />
+        </div>
+      </div>
+    </div>
+  );
 }
