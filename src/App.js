@@ -29,7 +29,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={!user ? <Landing /> : <Navigate to="/login" />}
+                element={!user ? <Landing /> : <Navigate to="/feed" />}
               />
               <Route
                 path="/login"
@@ -48,7 +48,10 @@ function App() {
                 path="/create"
                 element={user ? <Create /> : <Navigate to="/" />}
               />
-              <Route path="/blogs/:id" element={<Blog />} />
+              <Route
+                path="/blogs/:id"
+                element={user ? <Blog /> : <Navigate to="/login" />}
+              />
               <Route path="/profile" element={<Profile />} />
             </Routes>
           </div>

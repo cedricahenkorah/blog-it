@@ -3,7 +3,7 @@ import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 export default function Navbar() {
-  const { logout, isPending } = useLogout();
+  const { logout } = useLogout();
   const { user } = useAuthContext();
 
   return (
@@ -13,26 +13,26 @@ export default function Navbar() {
           <Link to="/">blogIt</Link>
         </li>
 
-        <>
-          <li className="mr-5">
-            <Link to="/about">About</Link>
-          </li>
-          <li className="mr-5">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="mr-5">
-            <Link to="signup">Signup</Link>
-          </li>
-        </>
+        <li className="mr-5">
+          <Link to="/about">About</Link>
+        </li>
+
+        {!user && (
+          <>
+            <li className="mr-5">
+              <Link to="/login">Login</Link>
+            </li>
+            <li className="mr-5">
+              <Link to="/signup">Signup</Link>
+            </li>
+          </>
+        )}
 
         {user && (
           <li>
-            {!isPending && (
-              <button className="btn" onClick={logout}>
-                Logout
-              </button>
-            )}
-            {isPending && <button className="btn">Logging out...</button>}
+            <button className="btn" onClick={logout}>
+              Logout
+            </button>
           </li>
         )}
       </ul>
