@@ -1,13 +1,19 @@
 .sidebar {
   width: 300px;
-  min-width: 300px;
   min-height: 100vh;
   box-sizing: border-box;
   position: relative;
   color: #fff;
 }
+
+@media (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .sidebar-content {
-  position: fixed;
+  /* position: fixed; */
   width: inherit;
 }
 .sidebar .user {

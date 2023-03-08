@@ -16,7 +16,6 @@ export default function BlogSummary({ blog }) {
 
   return (
     <div>
-      {" "}
       <div className="project-summary">
         <h2 className="font-medium text-2xl">{blog.name}</h2>
         <p className="flex items-center mt-2">

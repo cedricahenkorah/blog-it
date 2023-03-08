@@ -12,6 +12,7 @@ const categories = [
   { value: "news", label: "News" },
   { value: "education", label: "Education" },
   { value: "entertainment", label: "Entertainment" },
+  { value: "sports", label: "Sports" },
 ];
 
 export default function Create() {

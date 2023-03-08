@@ -25,6 +25,7 @@ export default function Feed() {
           case "education":
           case "entertainment":
           case "news":
+          case "sports":
             console.log(document.category, currentFilter);
             return document.category === currentFilter;
           default:
@@ -35,7 +36,7 @@ export default function Feed() {
 
   return (
     <div className="md:px-20 lg:pt-1 px-5 flex-grow">
-      <h2 className="text-3xl font-bold tracking-widest">Blogs feed</h2>
+      <h2 className="md:text-3xl font-bold tracking-widest text-xl">Feed</h2>
       {error && <p className="error">{error}</p>}
       {documents && (
         <FeedFilter currentFilter={currentFilter} changeFilter={changeFilter} />

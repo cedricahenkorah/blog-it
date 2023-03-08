@@ -14,7 +14,7 @@ import Landing from "./pages/landing/Landing";
 import Create from "./pages/create/Create";
 import Profile from "./pages/profile/Profile";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Sidebars from "./components/Sidebar";
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          {user && <Sidebar />}
+          {user && <Sidebars />}
           <div className="w-full">
             <Navbar />
             <Routes>

@@ -1,11 +1,13 @@
 .project-filter {
   margin: 30px auto;
+  overflow-x: auto;
 }
 .project-filter nav {
   display: flex;
   padding: 10px;
   background-color: #fff;
   border-radius: 4px;
+  overflow-x: auto;
 }
 .project-filter p {
   font-size: 0.9em;

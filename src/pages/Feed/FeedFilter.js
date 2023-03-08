@@ -6,15 +6,24 @@ const filterList = [
   "news",
   "education",
   "entertainment",
+  "sports",
 ];
 
-export default function FeedFilter() {
+export default function FeedFilter({ currentFilter, changeFilter }) {
+  const handleClick = (newFilter) => {
+    changeFilter(newFilter);
+  };
+
   return (
     <div className="project-filter">
       <nav>
         <p>views:</p>
         {filterList.map((f) => (
-          <button key={f} onClick={() => {}} className="">
+          <button
+            key={f}
+            onClick={() => handleClick(f)}
+            className={currentFilter === f ? "active" : ""}
+          >
             {f}
           </button>
         ))}
