@@ -14,6 +14,10 @@ export default function BlogSummary({ blog }) {
     navigate("/feed");
   };
 
+  const handleBack = (e) => {
+    navigate("/feed");
+  };
+
   return (
     <>
       <div className="project-summary">
@@ -36,14 +40,16 @@ export default function BlogSummary({ blog }) {
           <p className="details">{blog.details}</p>
         </div>
       </div>
-      {user.uid === blog.createdBy.id && (
-        <button
-          className="btn w-40 justify-center mx-auto"
-          onClick={handleClick}
-        >
-          delete blog
+      <div className="flex flex-row justify-between">
+        {user.uid === blog.createdBy.id && (
+          <button className="btn w-40 " onClick={handleClick}>
+            delete blog
+          </button>
+        )}
+        <button className="btn w-40" onClick={handleBack}>
+          back to feed
         </button>
-      )}
+      </div>
     </>
   );
 }

@@ -7,8 +7,8 @@ import FeedList from "../../components/FeedList";
 import "./Feed.css";
 
 export default function Feed() {
-  const { documents, error } = useCollection("blogs");
   const [currentFilter, setCurrentFilter] = useState("all");
+  const { documents, error } = useCollection("blogs");
 
   const changeFilter = (newFilter) => {
     setCurrentFilter(newFilter);
