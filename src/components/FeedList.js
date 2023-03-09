@@ -7,7 +7,14 @@ export default function FeedList({ blogs }) {
     <div className="py-5 sm:py-5 overflow-y-auto md:h-screen h-[600px]">
       <div className="mx-auto max-w-7xl ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-4 gap-x-4  lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {blogs.length === 0 && <p>No blogs posted yet!</p>}
+          {blogs.length === 0 && (
+            <p>
+              No blogs posted yet!{" "}
+              <Link to="/create">
+                <span className="text-blue-600">blogIt?</span>
+              </Link>
+            </p>
+          )}
           {blogs.map((blog) => (
             <Link to={`/blogs/${blog.id}`} key={blog.id}>
               <article
