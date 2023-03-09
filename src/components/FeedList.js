@@ -32,7 +32,7 @@ export default function FeedList({ blogs }) {
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                     <span className="absolute inset-0" />
-                    {blog.title}
+                    {blog.name}
                   </h3>
                   <p className="mt-5 mr-2 text-sm leading-6 text-gray-600 line-clamp-3">
                     {blog.details}
