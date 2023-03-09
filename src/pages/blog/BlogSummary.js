@@ -15,26 +15,35 @@ export default function BlogSummary({ blog }) {
   };
 
   return (
-    <div>
+    <>
       <div className="project-summary">
-        <h2 className="font-medium text-2xl">{blog.name}</h2>
-        <p className="flex items-center mt-2">
+        <h2 className="font-medium text-xl">{blog.name}</h2>
+        <div className="flex items-center mt-2">
           <Avatar src={blog.createdBy.photoURL} />
           <p className="ml-2">By: {blog.createdBy.displayName} </p>
-          <p className="ml-auto">
+          <p className="ml-auto hidden md:flex">
             {formatDistanceToNow(blog.createdAt.toDate(), {
               addSuffix: true,
             })}
           </p>
+        </div>
+        <p className="mt-2 md:hidden flex">
+          {formatDistanceToNow(blog.createdAt.toDate(), {
+            addSuffix: true,
+          })}
         </p>
-
-        <p className="details">{blog.details}</p>
+        <div className="bg-white p-3 mt-5">
+          <p className="details">{blog.details}</p>
+        </div>
       </div>
       {user.uid === blog.createdBy.id && (
-        <button className="btn" onClick={handleClick}>
+        <button
+          className="btn w-40 justify-center mx-auto"
+          onClick={handleClick}
+        >
           delete blog
         </button>
       )}
-    </div>
+    </>
   );
 }

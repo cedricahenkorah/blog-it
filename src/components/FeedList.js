@@ -4,15 +4,15 @@ import Avatar from "./Avatar";
 
 export default function FeedList({ blogs }) {
   return (
-    <div className="bg-slate-200 py-5 sm:py-5">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8  lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div className="py-5 sm:py-5 overflow-y-auto md:h-screen h-[600px]">
+      <div className="mx-auto max-w-7xl ">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-4 gap-x-4  lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {blogs.length === 0 && <p>No blogs posted yet!</p>}
           {blogs.map((blog) => (
             <Link to={`/blogs/${blog.id}`} key={blog.id}>
               <article
                 key={blog.id}
-                className="flex max-w-xl flex-col items-start justify-between"
+                className="flex max-w-xl flex-col items-start justify-between bg-slate-200 p-4 rounded-md"
               >
                 <div className="flex items-center gap-x-4 text-xs">
                   {/* <time dateTime={post.datetime} className="text-gray-500">

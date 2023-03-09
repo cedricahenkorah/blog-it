@@ -41,9 +41,9 @@ export default function Signup() {
   };
 
   return (
-    <div className="md:px-20 w-full lg:flex lg:pt-8 px-5">
+    <div className="md:px-20 w-full lg:flex lg:pt-1 px-5">
       <form
-        className="max-w-lg mx-auto p-10 border-2 border-solid bg-white shadow-md rounded-lg"
+        className="max-w-lg mx-auto mt-[2px] mb-20 p-10 md:border-2 md:border-solid md:bg-white md:shadow-md rounded-lg"
         onSubmit={handleSubmit}
       >
         <h2 className="text-3xl font-bold">Create new account</h2>

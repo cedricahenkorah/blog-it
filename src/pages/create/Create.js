@@ -58,11 +58,11 @@ export default function Create() {
   const [formError, setFormError] = useState(null);
 
   return (
-    <div className="max-w-5xl md:px-20 lg:pt-8 px-5 flex-grow">
+    <div className="max-w-5xl md:px-20 lg:pt-8 px-5 flex-grow pt-3">
       <h2 className="text-3xl font-bold tracking-widest ">Create a new blog</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          <span className="text-2xl">Blog title:</span>
+          <span className="md:text-2xl text-xl">Blog title:</span>
           <input
             type="text"
             required
@@ -71,7 +71,7 @@ export default function Create() {
           />
         </label>
         <label>
-          <span className="text-2xl">Content:</span>
+          <span className="md:text-2xl text-xl">Content:</span>
           <textarea
             type="text"
             required
@@ -80,7 +80,7 @@ export default function Create() {
           ></textarea>
         </label>
         <label>
-          <span className="text-2xl">Blog category:</span>
+          <span className="md:text-2xl text-xl">Blog category:</span>
           <Select
             options={categories}
             onChange={(option) => setCategory(option)}

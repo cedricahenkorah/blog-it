@@ -13,7 +13,7 @@ export default function Login() {
 
   return (
     <form
-      className="max-w-lg mx-auto mt-[60px] p-10 border-2 border-solid bg-white shadow-md rounded-lg"
+      className="max-w-lg mx-auto mt-[60px] p-10 md:border-2 md:border-solid md:bg-white md:shadow-md rounded-lg"
       onSubmit={handleSubmit}
     >
       <h2 className="text-3xl font-bold">Login</h2>

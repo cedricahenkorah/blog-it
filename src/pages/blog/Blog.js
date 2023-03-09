@@ -18,8 +18,8 @@ export default function Blog() {
   }
 
   return (
-    <div className="md:px-20 lg:pt-1 px-5 flex-grow">
-      <div className="blog-details">
+    <div className="md:px-20 lg:pt-1 px-5 flex-grow pb-5">
+      <div className="grid grid-cols-1 gap-10">
         <BlogSummary blog={document} />
         <BlogComments blog={document} />
       </div>
